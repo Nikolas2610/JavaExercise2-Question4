@@ -7,7 +7,7 @@ import java.rmi.registry.Registry;
 public class Client {
     public static void main(String[] args) {
         try {
-            Registry registry = LocateRegistry.getRegistry(1888);
+            Registry registry = LocateRegistry.getRegistry(10007);
             IServer service = (IServer) registry.lookup("IServer");
             BufferedReader txt = new BufferedReader(new InputStreamReader(System.in));
             while (true) {

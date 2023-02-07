@@ -55,7 +55,7 @@ public class Server extends UnicastRemoteObject implements IServer {
 
     public static void main(String[] args) {
         try {
-            Registry registry = LocateRegistry.createRegistry(1888);
+            Registry registry = LocateRegistry.createRegistry(10007);
             IServer service = new Server();
             registry.rebind("IServer", service);
             System.out.println(ANSI_BLUE + "Server running..." + ANSI_RESET);
